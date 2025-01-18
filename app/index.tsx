@@ -3,6 +3,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 import { useState } from "react";
 import { Colors } from "@/styles/Colors";
 import { SafeAreaView } from "react-native-safe-area-context";
+import MyKeyboard from "@/components/MyKeyboard";
 
 export default function Index() {
   const [theme, setTheme] = useState("light");
@@ -20,6 +21,7 @@ export default function Index() {
           value={theme === "dark"}
           onValueChange={() => setTheme(theme === "light" ? "dark" : "light")}
         />
+        <MyKeyboard />
       </SafeAreaView>
     </ThemeContext.Provider>
   );
